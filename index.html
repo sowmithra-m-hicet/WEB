@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Newsletter Signup</title>
+    </head>
+    <body>
+        <h1> Newsletter Signup</h1>
+        <form on submit="return validateForm()">
+            <label> Name:</label>
+            <input type="text"id="name">
+            <br><br>
+            <label>email:</label>
+            <input type="email"id="email">
+            <br><br>
+            <label>phone:</label>
+            <input type="text"id="phone">
+            <br><br>
+            <button type="submit">subscribe</button>
+            </form>
+            <script>
+                function validateForm()
+                {
+                    let name=document.getElementById("name").value;
+                    let email=document.getElementById("email").value;
+                    let phone=document.getElementById("phone").value;
+                    if(name==""||phone=='')
+                    {
+                        alert("Please fill in all fields");
+                        return false;
+                    }
+                    alert("Newsletter subscription successful!");
+                    return false;
+                }
+            </script>
+    </body>
+</html>
